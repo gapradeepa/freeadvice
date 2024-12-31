@@ -1,0 +1,46 @@
+.container {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1557683316-973673baf926");
+
+  background-size: cover;
+  display: flex;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.paper {
+  background-color: whitesmoke;
+  width: 40%;
+  height: 40%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.advice {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+Button :hover {
+  margin: 20px;
+  color: red;
+}
+
+@media screen and (max-width: 1200px) {
+  .paper {
+    width: 60%;
+    height: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .paper {
+    width: 80%;
+    height: 80%;
+  }
+}
