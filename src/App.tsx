@@ -1,19 +1,20 @@
 import axios from "axios";
 import "./App.css";
-import NavigationMenu from "./NavigationMenu/NavigationMenu";
-import React, { useState } from "react";
+
 import Typography from "@mui/material/Typography";
 import { Box, Button, Paper } from "@mui/material";
-import { Gradient } from "@mui/icons-material";
+import React from "react";
+
+type typeAdvice = { advice: string };
 
 class App extends React.Component {
-  state = { advice: "" };
+  state: typeAdvice = { advice: "" };
 
   componentDidMount() {
     this.fetchAdvice();
   }
 
-  fetchAdvice = () => {
+  fetchAdvice = (): void => {
     axios
       .get("https://api.adviceslip.com/advice")
       .then((response) => {
